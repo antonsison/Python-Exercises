@@ -161,11 +161,13 @@ print(get_unique(sample_list))
 
 def get_index(list1, input1):
 
+	count = 0
 	for i in list1:
-		if input1 in list1:
-			return len(list1) - 1
+		if input1 == list1[count]:
+			return count
 		elif input1 not in list1:
 			return ("Not in list")
+		count += 1
 
 sample_list = [1,3,4]
 print(get_index(sample_list, 4))
